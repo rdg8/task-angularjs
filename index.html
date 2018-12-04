@@ -1,0 +1,46 @@
+<!doctype html>
+<html ng-app>
+	<head>
+		<title>Lista de tarefa com AngularJS</title>
+    <meta charset="utf-8">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<script src="lib/angular-1.0.1.js"></script>
+		<script src="app/lista-tarefa.js"></script>
+	</head>
+	<body>
+		<div class="container" ng-controller="ListaTarefaController">
+			<div class="row">
+				<div class="page-header">
+					<h1>Lista de tarefa</h1>
+				</div>
+			</div>
+      <div class="row">
+        <form class="form-inline" name="formItem">
+          <input type="text" ng-model="item.taref" placeholder="tarefa">
+          <input type="date" ng-model="item.dia" placeholder="Data" class="input-small">
+          <button class="btn btn-primary" ng-click="adicionaItem()">adicionar tarefa</button>
+        </form>
+      </div>
+      <div class="row">
+        <table id="lista-tarefa" class="table table-striped">
+          <thead>
+            <tr>
+              <th>tarefa</th>
+              <th>data</th>
+              <th>concluido</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="item in itens" class="">
+              <td><strong>{{ item.taref }}</strong></td>
+              <td>{{ item.dia }}</td>
+              <td><input type="checkbox" ng-model="item.delete"></td>
+              <td><button class="btn btn-danger" ng-click="deletaItem(item.taref)">deletar</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+		</div>
+	</body>
+</html>
