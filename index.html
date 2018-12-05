@@ -1,11 +1,23 @@
 <!doctype html>
 <html ng-app>
 	<head>
-		<title>Lista de tarefa com AngularJS</title>
     <meta charset="utf-8">
+		<title>Lista de tarefa com AngularJS</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="canonical" href="https://weather-pwa-sample.firebaseapp.com/final/">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
 		<link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="manifest" href="/manifest.json">
 		<script src="lib/angular-1.0.1.js"></script>
-		<script src="app/lista-tarefa.js"></script>
+    <script src="app/lista-tarefa.js"></script>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Task PWA">
+    <link rel="apple-touch-icon" href="images/icon-152x152.png">
+    <meta name="msapplication-TileImage" content="images/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#2F3BA2">
 	</head>
 	<body>
 		<div class="container" ng-controller="ListaTarefaController">
